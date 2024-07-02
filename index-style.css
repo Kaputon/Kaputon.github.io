@@ -1,0 +1,76 @@
+:root {
+    /* How much of the page we want our index UI to take up. Half of the viewport width*/
+    --index-page-percentage: 100%;
+    --main-font: verdana;
+    --main-ui-color: ghostwhite;
+    --ui-outset-color: #00404075;
+    --main-ui-margin-left: 25%;
+    --title-pfp-width-px: 130px;
+}
+html{
+    background-color: #000000;
+    font-family: var(--main-font);
+    font-size: smaller;
+}
+.title-section {
+    background-color: var(--main-ui-color);
+    color: black;
+    border: 5px outset var(--ui-outset-color);
+}
+.title-profile-picture-container {
+    text-shadow: blue 5px 5px 20px;
+    padding: 1.5%;
+/*    align-self: center;*/
+    float: left;
+}
+.title-text-container{
+    text-shadow: #00404090 0 0 3px;
+    align-content: center;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+/*    flex-wrap: nowrap;*/
+}
+.button {
+    flex: 1;
+    background-color: var(--main-ui-color);
+    color: black;
+    text-align: center;
+    font-size: larger;
+    border: 3px outset var(--ui-outset-color);
+}
+.button a{
+    color: black;
+    text-decoration: none;
+}
+.background-with-img{
+    background-image: url('assets/star_night_anim_bg/frame1.png') ;
+    animation: anim-background 1s infinite;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+.ui-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: var(--main-ui-margin-left);
+    width: 50vw;
+    height: 97vh;
+}
+.index-page{
+    width: 99vw;
+    height: 97vh;
+}
+@keyframes anim-background{
+    25%  {background-image: url(assets/star_night_anim_bg/frame2.png);}
+    50%  {background-image: url(assets/star_night_anim_bg/frame3.png);}
+    75%  {background-image: url(assets/star_night_anim_bg/frame4.png);}
+    100%  {background-image: url(assets/star_night_anim_bg/frame1.png);}
+}
