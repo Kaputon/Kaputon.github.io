@@ -45,8 +45,6 @@ html{
     text-decoration: none;
 }
 .background-with-img{
-    background-image: url('assets/star_night_anim_bg/frame1.png') ;
-    animation: anim-background 1s infinite;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -55,6 +53,14 @@ html{
     left: 0;
     background-repeat: repeat-x;
     z-index: -1;
+    animation: anim-background 0.75s linear infinite;
+}
+@keyframes anim-background{
+    0%  {background-image: url(assets/star_night_anim_bg/frame1.png);}
+    25%  {background-image: url(assets/star_night_anim_bg/frame2.png);}
+    50%  {background-image: url(assets/star_night_anim_bg/frame3.png);}
+    75%  {background-image: url(assets/star_night_anim_bg/frame4.png);}
+    100%  {background-image: url(assets/star_night_anim_bg/frame1.png);}
 }
 .ui-container{
     display: flex;
@@ -67,10 +73,4 @@ html{
 .index-page{
     width: 99vw;
     height: 97vh;
-}
-@keyframes anim-background{
-    25%  {background-image: url(assets/star_night_anim_bg/frame2.png);}
-    50%  {background-image: url(assets/star_night_anim_bg/frame3.png);}
-    75%  {background-image: url(assets/star_night_anim_bg/frame4.png);}
-    100%  {background-image: url(assets/star_night_anim_bg/frame1.png);}
 }
