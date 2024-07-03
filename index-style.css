@@ -53,6 +53,10 @@ html{
     left: 0;
     background-repeat: repeat-x;
     z-index: -1;
+    background-image: url(assets/star_night_anim_bg/frame1.png),
+    url(assets/star_night_anim_bg/frame2.png),
+    url(assets/star_night_anim_bg/frame3.png),
+    url(assets/star_night_anim_bg/frame4.png);
     animation: anim-background 0.75s linear infinite;
 }
 @keyframes anim-background{
